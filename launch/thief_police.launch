@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="turtlesim" name="turtlesim" type="turtlesim_node" >
+        <remap from="/turtle1" to="/thief"/>
+	</node>
+	
+	<node pkg="rosservice" type="rosservice" name="turtle" args="call /spawn 0.0 0.0 0.0 police" />   
+
+    <node pkg="thief_police" name="police" type="police" />
+
+</launch>
+
+
