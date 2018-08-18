@@ -6,7 +6,7 @@ Chasing a Turtle by Another Turtle using ROS Turtlesim package
 soruce <path_to_catkin_WorkSpace>/devel/setup.bash
 roslaunch thief_police thief_police.launch 
 ```
-### to move thief turtle 
+### to move theif turtle 
 ```
 rosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/thief/cmd_vel
 ```
