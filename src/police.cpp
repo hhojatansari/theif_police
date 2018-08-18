@@ -12,8 +12,8 @@ using namespace turtlesim;
 Pose TheifPose;
 Pose PolicePose;
 
-float constant = 0.5;
-float distance_tolerance = 0.5;
+float constant = 0.3;
+float distance_tolerance = 0.9;
 
 class MyTurtle {
 public:
@@ -69,7 +69,7 @@ float MyTurtle::liner_vel(){
 }
 
 float MyTurtle::angle_vel(){
-    return constant * (steering_angle() - PolicePose.theta);
+    return constant * (steering_angle() - PolicePose.theta)*1.5;
 }
 
 float MyTurtle::steering_angle(){
@@ -98,7 +98,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "police");
     MyTurtle turtle;
-
+    
     turtle.TheifSub = turtle.ListenerTheifNode.subscribe("/thief/pose", 10, thiefPoseUpdate);
     turtle.PoliceSub = turtle.ListenerPoliceNode.subscribe("/police/pose", 10, policePoseUpdate);
     turtle.Command = turtle.CommanderNode.advertise<geometry_msgs::Twist>("/police/cmd_vel", 10);
@@ -109,7 +109,7 @@ int main(int argc, char **argv)
         turtle.trackThief();
         ros::spinOnce();
         loop_rate.sleep();
-//        ros::spin();
+//        ros::spin();      //It's not working
     }
   return 0;
 }
