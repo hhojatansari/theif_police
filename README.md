@@ -4,7 +4,7 @@ Chasing a Turtle by Another Turtle using ROS Turtlesim package
 ### run project
 ```
 soruce <path_to_catkin_WorkSpace>/devel/setup.bash
-roslaunch thief_police thief_police.launch 
+roslaunch theif_police thief_police.launch 
 ```
 ### to move theif turtle 
 ```
