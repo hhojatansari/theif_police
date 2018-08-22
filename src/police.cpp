@@ -99,7 +99,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "police");
     MyTurtle turtle;
     
-    turtle.TheifSub = turtle.ListenerTheifNode.subscribe("/thief/pose", 10, thiefPoseUpdate);
+    turtle.TheifSub = turtle.ListenerTheifNode.subscribe("/theif/pose", 10, thiefPoseUpdate);
     turtle.PoliceSub = turtle.ListenerPoliceNode.subscribe("/police/pose", 10, policePoseUpdate);
     turtle.Command = turtle.CommanderNode.advertise<geometry_msgs::Twist>("/police/cmd_vel", 10);
     
