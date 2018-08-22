@@ -14,19 +14,19 @@ catkin_make
 ### run project
 if using bash:
 ```
-soruce ~/catkin_ws/devel/setup.bash 
+source ~/catkin_ws/devel/setup.bash 
 ```
 if using zsh:
 ```
-soruce ~/catkin_ws/devel/setup.zsh 
+source ~/catkin_ws/devel/setup.zsh 
 ```
 ```
-roslaunch theif_police thief_police.launch 
+roslaunch theif_police theif_police.launch 
 ```
 
 ### to move theif turtle 
 ```
-rosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/thief/cmd_vel
+rosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/theif/cmd_vel
 ```
 ![Alt Text](https://raw.githubusercontent.com/hhojatansari/Theif-Police/master/outpout.gif)
 
