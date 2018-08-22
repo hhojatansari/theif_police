@@ -1,11 +1,29 @@
 # Theif-Police
 Chasing a Turtle by Another Turtle using ROS Turtlesim package
 
-### run project
+
+### Create Catkin WorkSpace and clone Repo
 ```
-soruce <path_to_catkin_WorkSpace>/devel/setup.bash
+cd ~
+mkdir -p catkin_ws/src
+cd catkin_ws/src
+git clone git@github.com:hhojatansari/theif_police.git
+cd ..
+catkin_make
+```
+### run project
+if using bash:
+```
+soruce ~/catkin_ws/devel/setup.bash 
+```
+if using zsh:
+```
+soruce ~/catkin_ws/devel/setup.zsh 
+```
+```
 roslaunch theif_police thief_police.launch 
 ```
+
 ### to move theif turtle 
 ```
 rosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/thief/cmd_vel
