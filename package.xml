@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>thief_police</name>
+  <name>theif_police</name>
   <version>0.0.0</version>
-  <description>The thief_police package</description>
+  <description>The theif_police package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
