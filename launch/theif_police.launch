@@ -6,7 +6,7 @@
 	
 	<node pkg="rosservice" type="rosservice" name="turtle" args="call /spawn 0.0 0.0 0.0 police" />   
 
-    <node pkg="thief_police" name="police" type="police" />
+    <node pkg="theif_police" name="police" type="police" />
 
 </launch>
 
